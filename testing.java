@@ -26,16 +26,28 @@ public class testing {
 
             switch (respuesta) {
                 case '1':
-                    System.out.print("Escribe el dato a ingresar al principio: ");
-                    entrada = bufer.readLine();
-                    dato = Integer.parseInt(entrada);
-                    lista.addFirst(dato);
+                    do{
+                        System.out.println("Escribe dato a almacenar en una lista: ");
+                        entrada = bufer.readLine();
+                        dato = Integer.parseInt(entrada);
+                        lista.addFirst(dato);
+                        System.out.println("Continuar insertando datos? (S/N)");
+                        entrada= bufer.readLine();
+                        respuesta = entrada.charAt(0);
+                    }
+                    while( respuesta !='N');
                     break;
                 case '2':
-                    System.out.print("Escribe el dato a ingresar al final: ");
-                    entrada = bufer.readLine();
-                    dato = Integer.parseInt(entrada);
-                    lista.add(dato);
+                    do{
+                        System.out.println("Escribe dato a almacenar en una lista: ");
+                        entrada = bufer.readLine();
+                        dato = Integer.parseInt(entrada);
+                        lista.add(dato);
+                        System.out.println("Continuar insertando datos? (S/N)");
+                        entrada= bufer.readLine();
+                        respuesta = entrada.charAt(0);
+                    }
+                    while( respuesta !='N');
                     break;
                 case '3':
                     System.out.print("Escribe el dato a ingresar: ");
@@ -45,6 +57,7 @@ public class testing {
                     entrada = bufer.readLine();
                     posicion = Integer.parseInt(entrada);
                     lista.add(dato, posicion);
+
                     break;
                 case '4':
                     lista.removeFirst();
